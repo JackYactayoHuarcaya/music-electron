@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+
+
+body {
+  background-image: url("../assets/fondo.jpg");
+  opacity: 0.85;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  border-radius: 1rem;
+}
+
+html {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.010);
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  -webkit-app-region: drag;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg1: #291E3C;
+  --bg2: #C135CE;
+  --bg3: #524171;
+}
+
+.marquee-container2 {
+  /* ancho visible */
+  overflow: hidden;
+  /* oculta lo que sobra */
+  white-space: nowrap;
+  /* no baja de línea */
+  position: relative;
+}
+
+.marquee-container {
+  width: 250px;
+  /* ancho visible */
+  overflow: hidden;
+  /* oculta lo que sobra */
+  white-space: nowrap;
+  /* no baja de línea */
+  position: relative;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  /* hace que empiece justo desde el borde */
+  animation: marquee 10s linear infinite;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+  cursor: default;
+}
+
+/* Solo se aplica la animación si el texto es más largo que el contenedor */
+.marquee-container .marquee-text {
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+    /* empieza desde el borde */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* se mueve hacia la izquierda */
+  }
+}
+
+/* Scrollbar moderno en púrpura */
+::-webkit-scrollbar {
+  width: 10px;
+  /* ancho del scroll */
+  height: 10px;
+  /* si hay scroll horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  /* color de fondo del track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #9b5de5, #6a00f4);
+  border-radius: 10px;
+  border: 2px solid #1a1a2e;
+  /* espacio alrededor del pulgar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b983ff, #8a2be2);
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin;
+  /* delgado */
+  scrollbar-color: #9b5de5 #1a1a2e;
+  /* thumb | track */
+}
