@@ -1,9 +1,9 @@
 import "electron";
 import "node:url";
 import "node:path";
-import { Y, Z, X } from "./main-B-UNI6gt.js";
+import { Y as m, Z as p, X as t } from "./main-Zq7DLSnH.js";
 export {
-  Y as MAIN_DIST,
-  Z as RENDERER_DIST,
-  X as VITE_DEV_SERVER_URL
+  m as MAIN_DIST,
+  p as RENDERER_DIST,
+  t as VITE_DEV_SERVER_URL
 };
